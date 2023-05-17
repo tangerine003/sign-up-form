@@ -25,13 +25,15 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 100px;
+  flex-wrap: nowrap;
 }
 
 .wrapper > div.heading-two {
-  width: 10%;
+  /* width: 10%; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* align-content: center; */
   flex-basis: 485px;
   margin-left: 84px;
   gap: 50px;
@@ -45,7 +47,7 @@ h2 {
 }
 
 img {
-  height: 27.6rem;
+  height: clamp(230px, 27.6rem, 10vh);
 }
 
 .sign-up-form-wrapper {
@@ -63,18 +65,17 @@ h1 {
 form {
   /* flex-grow: 1; */
   /* background-color: blueviolet; */
-  width: 647px;
+  max-width: 647px;
   border: solid #000072 6px;
   border-radius: 25px;
   margin-right: 84px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 25px 20px;
+  padding: 25px 20px 45px 20px;
   gap: 18px;
-  min-height: 57vh;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
 }
 
 .input-div {
@@ -83,6 +84,7 @@ form {
   /* flex-basis: 278.011px; */
   flex-basis: 200px;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
 label {
@@ -125,11 +127,15 @@ button {
   font-size: 1.7rem;
 }
 
-input:focus,
 input:invalid {
   border-color: #dd5032;
 }
 
 input:valid {
   border-color: #63cc89;
+}
+
+span {
+  font-weight: 400;
+  font-style: italic;
 }
