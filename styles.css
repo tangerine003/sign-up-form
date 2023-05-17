@@ -124,3 +124,12 @@ button {
 .sign-in-text {
   font-size: 1.7rem;
 }
+
+input:focus,
+input:invalid {
+  border-color: #dd5032;
+}
+
+input:valid {
+  border-color: #63cc89;
+}
